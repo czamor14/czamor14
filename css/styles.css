@@ -1,0 +1,258 @@
+/* ================================================
+   GLOBAL STYLE RESET + COLORS
+================================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f6fbf6;
+  color: #091009;
+}
+
+a {
+  text-decoration: none;
+  color: #091009;
+}
+
+/* BRAND COLORS */
+:root {
+  --text: #091009;
+  --background: #f6fbf6;
+  --primary: #50b554;
+  --secondary: #9cda9e;
+  --accent: #77a2d4;
+}
+
+#wrapper {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+}
+
+/* ================================================
+   HEADER
+================================================ */
+header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 3px solid var(--secondary);
+}
+
+.site-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* ================================================
+   NAVIGATION
+================================================ */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--secondary);
+}
+
+nav li {
+  margin: 0.5rem 1rem;
+}
+
+nav a {
+  font-weight: bold;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* ================================================
+   HERO IMAGE
+================================================ */
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--secondary);
+}
+
+/* ================================================
+   TAGLINE
+================================================ */
+.tagline {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ================================================
+   FEATURED BLOG POST
+================================================ */
+.featured {
+  padding: 2rem;
+}
+
+.featured h2 {
+  font-size: 1.6rem;
+}
+
+.featured-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: 8px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.featured-text h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+/* ================================================
+   NEWSLETTER SIGNUP
+================================================ */
+.newsletter-box {
+  border: 2px solid var(--accent);
+  padding: 1rem;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.newsletter-box input[type="email"],
+.newsletter-box input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.newsletter-box input[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter-box input[type="submit"]:hover {
+  background-color: #3f9444;
+}
+
+/* ================================================
+   FOOTER
+================================================ */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--secondary);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+================================================ */
+/* =========================================
+   INNER PAGE LAYOUT HELPERS
+   ========================================= */
+
+.inner-page {
+  padding: 2rem 1.5rem 3rem;
+}
+
+.inner-page h2 {
+  margin-bottom: 1rem;
+}
+
+.inner-page h3 {
+  margin-top: 1.5rem;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.two-column .col {
+  flex: 1 1 260px;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Blog list layout */
+.blog-list {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.blog-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.blog-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #4d4d4d;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card p {
+  margin-bottom: 0;
+}
+
+/* Wider screens: two-column blog layout */
+@media (min-width: 768px) {
+  .blog-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .featured-content {
+    grid-template-columns: 1fr 1fr 300px;
+  }
+
+  .hero img {
+    height: 420px;
+  }
+}
